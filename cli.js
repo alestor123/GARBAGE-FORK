@@ -7,5 +7,7 @@ var statscode = process.argv[2],
 data = await httpcat(statscode)
 fs.writeFileSync(`${statscode}.jpg`, data.buffer, (err) => {
 if (err) throw err;
-})})();
+})
+console.log(`Downloaded Image ${statscode}.jpg`)
+})();
 
